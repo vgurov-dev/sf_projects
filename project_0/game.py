@@ -15,6 +15,8 @@ class GuessGame:
             self.number = np.random.randint(1, 101) # random number
         elif self.type == 'semicalc':
             self.number = 0
+        self.steps = [10, 5, 2, 1]
+        self.steps.append(1)
     
     def start(self, *args):
         """Statring the game
@@ -41,12 +43,25 @@ class GuessGame:
     
     def __start_calc(self):
         """Start with automatic guessing of random number (w/o any parameters)"""
+        guess_num = np.random.randint(1, 101)
+        self.__guessing_number(guess_num)
+    
+    def __guessing_number(self, initial_num: int):
+        num = initial_num
+        classify_mem = None # classify memory
+        step = 0 # step for changing number (in case of changing self.__classify_number return)
         while True:
             self.count += 1
-            guess_num = np.random.randint(1, 101)
-            classify_number = self.__classify_number(guess_num)
-            if classify_number == 0:
+            classify_num = self.__classify_number(num)
+            if classify_num != 0:
+                if classify_mem != classify_num:
+                    if classify_mem is not None and self.steps[step] != 1:
+                        step += 1
+                    classify_mem = classify_num
+                num += self.steps[step] * classify_num
+            else:
                 break
+                    
     
     def __start_semicalc(self, number):
         """Start with automatic guessing with custom number initialisation"""

@@ -1,4 +1,4 @@
-name: sf_from_flie
+name: sf
 channels:
   - defaults
 dependencies:
