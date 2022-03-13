@@ -1,0 +1,5 @@
+data/ExchangeRates.csv
+data/hh_database.csv
+cleansing/__pycache__/cleaning_methods.cpython-38.pyc
+data/.DS_Store
+.DS_Store
