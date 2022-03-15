@@ -11,9 +11,9 @@
 ### Описание проекта    
 Провести Feature Engineering и предварительный EDA.
 Для работы с ноутбуком необходимо:
-    - Скачать папку data: https://drive.google.com/drive/folders/1NaSidK2ur3fJwcJ2namaxcExMKhyLia1?usp=sharing
-    - Распаковать с в папке data: в директории с ноутбуком
-    - При необхоимости изменить пути к файлам в ноутбуке в первой ячейке в классе Data
+* Скачать папку data: https://drive.google.com/drive/folders/1NaSidK2ur3fJwcJ2namaxcExMKhyLia1?usp=sharing
+* Распаковать с в папке data: в директории с ноутбуком
+* При необхоимости изменить пути к файлам в ноутбуке в первой ячейке в классе Data
 
 :arrow_up:[к оглавлению](#Оглавление)
 
